@@ -15,10 +15,9 @@ ActiveRecord::Schema.define(version: 3) do
   create_table "doctors", force: :cascade do |t|
     t.string "name"
     t.string "specialty"
-    t.string "location"
   end
 
-  create_table "location", force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
     t.string  "name"
     t.integer "patient_id"
     t.integer "doctor_id"
@@ -29,7 +28,6 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "last_name"
     t.string "date_of_birth"
     t.string "insurance_network"
-    t.string "location"
   end
 
 end
